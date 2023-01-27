@@ -39,18 +39,18 @@
     <div class="container">
       <div class="header-container d-flex align-items-center justify-content-between">
         <div class="logo">
-          <h1 class="text-light"><a href="index.php"><span>Teen Invest</span></a></h1>
+          <h1 class="text-light"><a href="index.html"><span>Teen Invest</span></a></h1>
           <!-- Uncomment below if you prefer to use an image logo -->
-           <!--<a href="index.php"><img src="" alt="" class="img-fluid"></a>-->
+           <!--<a href="index.html"><img src="" alt="" class="img-fluid"></a>-->
         </div>
 
         <nav id="navbar" class="navbar">
           <ul>
-            <li><a class="nav-link scrollto active" href="../../index.php">Home</a></li>
-            <li><a class="nav-link scrollto" href="../../index.php#about">Sobre</a></li>
-            <li><a class="nav-link scrollto" href="../../index.php#services">Serviços</a></li>
+            <li><a class="nav-link scrollto active" href="../../index.html">Home</a></li>
+            <li><a class="nav-link scrollto" href="../../index.html#about">Sobre</a></li>
+            <li><a class="nav-link scrollto" href="../../index.html#services">Serviços</a></li>
             
-            <li><a class="nav-link scrollto" href="../../index.php#team">desenvolvedores</a></li>
+            <li><a class="nav-link scrollto" href="../../index.html#team">desenvolvedores</a></li>
             
             <li><a class="nav-link scrollto" href="../../paginas/Login">Login</a></li>
             <li><a class="getstarted scrollto" href="../../paginas/CriarConta.php">Cadastrar-se</a></li>

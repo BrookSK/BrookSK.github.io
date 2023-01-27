@@ -34,7 +34,7 @@
 			<p>O link que você clicou pode estar quebrado, a 
         <br>página pode ter sido removida ou ocorreu um
         <br>erro ao estabelecer uma conexão com o banco de dados.</p>
-			<a href="../index.php" class="btn btn-main-md">Página Inicial</a>
+			<a href="../index.html" class="btn btn-main-md">Página Inicial</a>
 		</div>
 	</div>
 </section>

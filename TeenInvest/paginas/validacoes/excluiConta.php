@@ -41,7 +41,7 @@ if($resultado==true){
     session_destroy();
 
     echo '<script> f_mostraDeu(); </script>';
-    header("Location: ../../index.php");
+    header("Location: ../../index.html");
 }else{
 
     var_dump($_SESSION);
@@ -51,7 +51,7 @@ if($resultado==true){
 
     ?>
         <!--<script>
-            window.location.href = "../../index.php";
+            window.location.href = "../../index.html";
         </script>-->
     <?php
 }
