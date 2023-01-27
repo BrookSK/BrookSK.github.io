@@ -1,0 +1,54 @@
+﻿.jumbotron{
+    background-color: #153449;
+}
+.jumbotron h1{
+    color: white;
+}
+body{
+    background-color: whitesmoke;
+}
+img{
+    width: calc(100% - 20px);
+    height: 200px;
+    margin: 10px;
+}
+.NewsGrid{
+    margin: 10px;
+    border: 1px solid lightgray;
+    padding: 10px;
+}
+.NewsGrid h2{
+    font-size: 25px;
+    font-family: "Poppins", sans-serif;
+    color: black;
+}
+.NewsGrid h5{
+    font-size: 19px;
+    font-family: "Poppins", sans-serif;
+    color:#505050;
+}
+.NewsGrid h6{
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    color:rgb(133, 128, 128);
+}
+.NewsGrid p{
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    color:rgb(145, 144, 144);
+}
+.NewsGrid a{
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+}
+.container-fluid{
+    width: 90%;
+}
+
+.btnCadastra:hover{
+    background-color: #2055A6;
+}
+
+.btnGraf:hover{
+    background-color: #2055A6;
+}

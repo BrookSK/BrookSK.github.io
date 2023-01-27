@@ -1,0 +1,54 @@
+﻿--SERVIDOR EXTERNO INFINITYFREE--
+
+Conta:
+
+Domain: teenivest.epizy.com
+Account Password: tccwebsite
+username: epiz_31434715
+Password: UlWP8YQArQlB
+
+MySQL:
+
+MySQL DB Name: epiz_31434715_edfinanceira
+MySQL User Name: epiz_31434715
+MySQL Password: UlWP8YQArQlB
+MySQL Host Name: sql311.epizy.com
+
+Host:
+
+Main Domain (temporary domain): b8wjy8rv.epizy.com
+Domain: teenivest.epizy.com
+FTP hostname: ftpupload.net
+FTP username: epiz_31434715
+FTP password: UlWP8YQArQlB
+
+SSL certificate / DNS:
+
+Record Name: _ef13b76c5517896c1957c0181df0ab7d
+Domain: teenivest.epizy.com
+Destination: 1302f0c6a4c315f7902560b504f0280f.26f4d48845a0f12a0f7bc3af335e2eb8.t0173921001648918930.sectigo.com
+
+
+--SERVIDOR EXTERNO PROFESSOR--
+
+Servidor Web:
+
+philadelpho.ddns.net:100
+
+Servidor de BD do phpmyadmin:
+
+Servidor: philadelpho.ddns.net:100/phpmyadmin
+Usuario: phila
+Senha: 1234
+
+Servidor de BD para conexão no PHP:
+
+Servidor: philadelpho.ddns.net
+Usuario: phila
+Senha: 1234
+
+Servidor de arquivo ou FTP:
+
+Servidor: ftp://philadelpho.ddns.net
+Usuario: phila
+Senha: 1234

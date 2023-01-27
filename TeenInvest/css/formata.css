@@ -1,0 +1,93 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 100vh;
+    background: linear-gradient(25deg, #12438b 50%, #EEEEEE 98%);
+    background-repeat: no-repeat;  /*Formatando o fundo*/
+}
+
+input,
+textarea {
+    padding: 10px 12px 10px 12px;
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    margin-bottom: 25px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #2C3E50;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background-color: #ECEFF1  /*Formatando as caixas de texto*/
+}
+
+input:focus,
+textarea:focus {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid #304FFE;
+    outline-width: 0  /*Formatando as caixas de texto quando clica*/
+}
+
+.form-check-input {
+    width: 16px;
+    height: 16px;
+    margin-top: 6px  /*Formatando os "ja tem uma conta" e os termos de servico*/
+}
+
+.form-check-label {
+    font-size: 12px /*Formatando somemte a fonte dos termos de servico*/
+}
+
+.proceed button {
+    height: 50px;
+    font-size: 15px  /*Formatando o tamanho do botao*/
+}
+
+.btn-cor {
+    background-color: #25379b;
+    width: 100%;
+    color: #fff;
+    border-radius: 6px  /*Formatando a cor do botao e o tamanho/estilo*/
+}
+
+.btn-cor:hover {
+    background-color: #1054b9;
+    cursor: pointer  /*Formatando quando passa o mouse em cima*/
+}
+
+
+
+.card {
+    border-radius: 10px;
+    padding: 35px 26px;
+    width: 400px;
+    height: auto;
+    box-shadow: 0px 4px 8px 0px #757575;
+    border-radius: 10px;
+    background: #fff; /*Formatando a DIV branca atras*/
+}
+
+h3 {
+    font-size: 25px;
+    color: rgb(0, 33, 122);
+    font-family: Arial, Helvetica, sans-serif; /*Formatando o titulo "Crie sua conta"*/
+}
+
+.abt {
+    font-size: 16px; /*Formatando o "ja tem uma conta?"*/
+}
+
+.logo {
+    width: 400px;
+}
+
+html, body{
+    height: 100%;
+    overflow: hidden;
+}

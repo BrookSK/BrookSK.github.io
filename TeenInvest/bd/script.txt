@@ -1,0 +1,91 @@
+create database edfinanceira;
+use edfinanceira;
+
+create table tb_usuario(
+id_usuario int not null auto_increment primary key,
+primeironome_usuario varchar(45) not null,
+ultimonome_usuario varchar(45) not null,
+cpf_usuario varchar(15) unique,
+email_usuario varchar(60) unique not null,
+nascimento_usuario date,
+telefone_usuario varchar(30),
+senha_usuario varchar(60) not null,
+tipo varchar(5)
+);
+
+create table tb_cursos(
+id_curos int not null auto_increment primary key,
+nome_cursos varchar(100) not null,
+descricao_cursos varchar(255) not null,
+preco_cursos varchar(50) not null,
+link_cursos varchar(2083) not null,
+img_cursos varchar(255) not null
+);
+
+create table tb_noticias(
+id_noticias int not null auto_increment primary key,
+titulo_noticias varchar(100) not null,
+descricao_noticias varchar(255) not null,
+autor_noticias varchar(100) not null,
+link_noticias varchar(2083) not null,
+img_noticias varchar(255) not null
+);
+
+create table tb_perfilInvestimento(
+id_perfilInvestimento int not null auto_increment primary key,
+tempo bol not null,
+valor bool not null,
+codDoUsuario bigint,
+foreign key(codDoUsuario) references tb_usuario(id_usuario)
+);
+
+create table tb_nivelInvestimento(
+id_nivel int not null auto_increment primary key,
+descricao_nivel char(1),
+valormax_nivel char(15) not null,
+valormin_nivel char(15) not null
+);
+
+create table tb_nivelRisco(
+id_risco int not null auto_increment primary key,
+descricao_risco varchar(255) not null
+);
+
+create table tb_recomendacoes(
+descricao_recomendacoes varchar(255) not null,
+codDoInvestimento bigint,
+codDoRisco bigint,
+foreign key(codDoInvestimento) references tb_nivelInvestimento(id_nivel),
+foreign key(codDoRisco) references tb_nivelRisco(id_risco)
+);
+
+insert into tb_usuario(primeironome_usuario, ultimonome_usuario, email_usuario, senha_usuario, tipo)values('Lucas', 'Vacari', 'lucasrvacari9@gmail.com', '1234', 'admin'),('João', 'Pereira', 'jao@gmail.com', '1234', '');
+
+insert into tb_nivelInvestimento(descricao_nivel, valormax_nivel, valormin_nivel)values('D', '9999', '1000'),('C', '50000', '10000'),('B', '100000', '50001'),('A', '1000000', '100001');
+
+insert into tb_nivelRisco(descricao_risco)values('100% de chance de ganhar 10%'),('Possibilidade de ganhar entre 5% - 20%'),('Possibilidade de ganhar entre 0% - 25%'),('Possibilidade de perder 10% ou ganhar até 40%');
+
+insert into tb_recomendacoes(descricao_recomendacoes, codDoInvestimento, codDoRisco)values('','1','1');
+
+
+
+1 A
+1 B
+1 C
+1 D
+1 E
+2 A
+2 B
+2 C
+2 D
+2 E
+3 A
+3 B
+3 C
+3 D
+3 E
+4 A
+4 B
+4 C
+4 D
+4 E

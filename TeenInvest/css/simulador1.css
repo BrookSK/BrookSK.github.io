@@ -1,0 +1,12 @@
+﻿.btn-cor {
+    background-color: #25379b;
+    color: #fff;
+    border-radius: 6px;  /*Formatando a cor do botao e o tamanho/estilo*/
+    height: 50px;
+    width: 250px;
+}
+
+.btn-cor:hover {
+    background-color: #1054b9;
+    cursor: pointer  /*Formatando quando passa o mouse em cima*/
+}

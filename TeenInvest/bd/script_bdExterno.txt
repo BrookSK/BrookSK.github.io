@@ -1,0 +1,20 @@
+﻿use epiz_31434715_edfinanceira;
+
+create table tb_usuario(
+id_usuario int not null auto_increment primary key,
+primeironome_usuario varchar(45) not null,
+ultimonome_usuario varchar(45) not null,
+cpf_usuario varchar(15) unique not null,
+email_usuario varchar(60) unique not null,
+nascimento_usuario date not null,
+telefone_usuario varchar(30) not null,
+senha_usuario varchar(60) not null
+);
+
+create table tb_cadusuario(
+id_usuario int not null auto_increment primary key,
+primeironome_usuario varchar(45) not null,
+ultimonome_usuario varchar(45) not null,
+email_usuario varchar(60) unique not null,
+senha_usuario varchar(60) not null
+);

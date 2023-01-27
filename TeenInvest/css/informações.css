@@ -1,0 +1,51 @@
+h1 {
+    font-family: GraublauWeb;
+    font-weight: bold;
+    src: url("MADE TOMMY Medium_PERSONAL USE.otf") format("opentype");
+}
+
+.txtCurso{
+    font-family: 'Kanit', sans-serif;
+    font-size: 60px;
+}
+
+.btnGraf:hover{
+  background-color: #2055A6;
+}
+
+.txtLog{
+    font-family: "sen-bold";
+    font-size: 17px;
+}
+
+.txtGratis{
+    font-size: 17px;
+    font-weight: bold;
+   color: #3CB371;
+}
+
+
+.txtValor{
+    font-size: 17px;
+    font-weight: bold;
+    color:black;   
+}
+.txtInfo{
+    font-size: 25px;
+    font-weight: bold;
+    color: #2055A6;   
+}
+.txtDisc{
+    font-size: 17px;
+    font-weight: bold;
+      
+}
+
+.txtImagem{
+    font-weight: bold;
+}
+
+strong{
+    font-family: "Poppins", sans-serif;
+    font-size: 23px;
+}

@@ -1,0 +1,179 @@
+create database edfinanceira;
+use edfinanceira;
+
+CREATE TABLE `tb_cursos` (
+  `id_curos` int NOT NULL,
+  `nome_cursos` varchar(100) NOT NULL,
+  `descricao_cursos` varchar(255) NOT NULL,
+  `preco_cursos` varchar(50) NOT NULL,
+  `link_cursos` varchar(2083) NOT NULL,
+  `img_cursos` varchar(255) NOT NULL
+);
+
+INSERT INTO `tb_cursos` (`id_curos`, `nome_cursos`, `descricao_cursos`, `preco_cursos`, `link_cursos`, `img_cursos`) VALUES
+(3, 'EV.G - Gestão de Finanças Pessoais', 'Público-alvo: Jovens e adultos<br>\r\nCarga horária: 20 horas<br>\r\nFormato: Online<br>\r\nOferece certificado? Sim\r\n                ', 'Grátis', 'https://www.escolavirtual.gov.br/curso/170', 'EV.G.png'),
+(4, 'OpenEdu', 'Conteúdos práticos e objetivos, até mesmo pra quem já investe<br><br>', 'Grátis', 'https://goopen.com.br/edu', 'Open.png'),
+(5, 'EaD SEST SENAT – Educação Financeira', '                  Público-alvo: Iniciantes<br>\r\n                  Carga horária: 20 horas<br>\r\n                  Formato: Online<br>\r\n                  Oferece certificado? Não informado\r\n                ', 'Grátis', 'https://ead.sestsenat.org.br/cursos/educacao-financeira/', 'SENAT.png'),
+(6, 'XPEED – Educação Financeira para Jovens', '                  Público-alvo: Iniciantes<br>\r\n                  Carga horária: 2 horas<br>\r\n                  Formato: Online<br>\r\n                  Oferece certificado? Sim\r\n                ', '68.00', 'https://xpeedschool.com.br/curso/educacao-financeira-para-jovens/?gclid=Cj0KCQiAq7COBhC2ARIsANsPATHhjZ98laZU_XAcdjqgWcHPQdHcNpkhEsV2UBiy2DcLeUJoLEpfr0EaAsywEALw_wcB', 'XPEED.png'),
+(7, 'Udemy – Curso Completo de Educação Financeira', '                  Público-alvo: Iniciantes e iniciados no mundo das finanças pessoais e dos investimentos<br>\r\n                  Carga horária: 8 horas<br>\r\n                  Formato: Online<br>\r\n                  Oferece certificado? Sim\r\n               ', '329.90', 'https://www.udemy.com/course/curso-completo-de-educacao-financeira/', 'Udemy.png'),
+(8, 'Lúmina/UFRGS – Educação Financeira no Século XXI para a Liberdade Financeira', '                  Público-alvo: Iniciantes<br>\r\n                  Carga horária: 25 horas<br>\r\n                  Formato: Online<br>\r\n                  Oferece certificado? Sim\r\n                ', 'Grátis', 'https://lumina.ufrgs.br/course/view.php?id=152', 'Lumina.png'),
+(9, 'Serasa – Trilha Financeira', '                  Público-alvo: Iniciantes<br>\r\n                  Carga horária: Não informado<br>\r\n                  Formato: Online<br>\r\n                  Oferece certificado? Sim\r\n                ', 'Grátis', 'https://www.serasa.com.br/ensina/dicas/curso-trilha-financeira/', 'serasa.png'),
+(10, 'Fundação Bradesco – Educação Financeira', '                  Público-alvo: Iniciantes<br>\r\n                  Carga horária: 4 horas<br>\r\n                  Formato: Online<br>\r\n                  Oferece certificado? Não informado\r\n                ', 'Grátis', 'https://www.ev.org.br/cursos/educacao-financeira', 'Bradesco.png'),
+(11, 'FGV – Como Gastar Conscientemente', '                  Público-alvo: Iniciantes<br>\r\n                  Carga horária: 8 horas<br>\r\n                  Formato: Online<br>\r\n                  Oferece certificado? Não\r\n                ', 'Grátis', 'https://educacao-executiva.fgv.br/cursos/online/curta-media-duracao-online/como-gastar-conscientemente', 'FGV.png');
+
+CREATE TABLE `tb_noticias` (
+  `id_noticias` int NOT NULL,
+  `titulo_noticias` varchar(100) NOT NULL,
+  `descricao_noticias` varchar(255) NOT NULL,
+  `autor_noticias` varchar(100) NOT NULL,
+  `link_noticias` varchar(2083) NOT NULL,
+  `img_noticias` varchar(255) NOT NULL
+);
+
+CREATE TABLE `tb_usuario` (
+  `id_usuario` int NOT NULL,
+  `primeironome_usuario` varchar(45) NOT NULL,
+  `ultimonome_usuario` varchar(45) NOT NULL,
+  `cpf_usuario` varchar(15) DEFAULT NULL,
+  `email_usuario` varchar(60) NOT NULL,
+  `nascimento_usuario` date DEFAULT NULL,
+  `telefone_usuario` varchar(30) DEFAULT NULL,
+  `senha_usuario` varchar(60) NOT NULL,
+  `tipo` varchar(5) DEFAULT NULL
+);
+
+INSERT INTO `tb_usuario` (`id_usuario`, `primeironome_usuario`, `ultimonome_usuario`, `cpf_usuario`, `email_usuario`, `nascimento_usuario`, `telefone_usuario`, `senha_usuario`, `tipo`) VALUES
+(1, 'Lucas', 'Vacari', NULL, 'lucasrvacari9@gmail.com', NULL, NULL, '1234', 'admin'),
+(2, 'João', 'Pereira', NULL, 'jao@gmail.com', NULL, NULL, '1234', NULL),
+(3, 'Lucas', 'Mendes', NULL, 'lucasM@gmail.com', NULL, NULL, '1234', NULL),
+(4, 'Pedro', 'Tester', NULL, 'pedro@gmail.com', NULL, NULL, '1234', NULL);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `tb_cursos`
+--
+ALTER TABLE `tb_cursos`
+  ADD PRIMARY KEY (`id_curos`);
+
+--
+-- Indexes for table `tb_noticias`
+--
+ALTER TABLE `tb_noticias`
+  ADD PRIMARY KEY (`id_noticias`);
+
+--
+-- Indexes for table `tb_usuario`
+--
+ALTER TABLE `tb_usuario`
+  ADD PRIMARY KEY (`id_usuario`),
+  ADD UNIQUE KEY `email_usuario` (`email_usuario`),
+  ADD UNIQUE KEY `cpf_usuario` (`cpf_usuario`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `tb_cursos`
+--
+ALTER TABLE `tb_cursos`
+  MODIFY `id_curos` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+--
+-- AUTO_INCREMENT for table `tb_noticias`
+--
+ALTER TABLE `tb_noticias`
+  MODIFY `id_noticias` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `tb_usuario`
+--
+ALTER TABLE `tb_usuario`
+  MODIFY `id_usuario` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  
+create table tb_perfilInvestimento(
+id_perfilInvestimento int not null auto_increment primary key,
+tempo bool not null,
+valor bool not null,
+codDoUsuario int,
+foreign key(codDoUsuario) references tb_usuario(id_usuario)
+);
+
+create table tb_nivelInvestimento(
+id_nivel int not null auto_increment primary key,
+descricao_nivel char(1),
+valormax_nivel char(15) not null,
+valormin_nivel char(15) not null
+);
+
+create table tb_nivelRisco(
+id_risco int not null auto_increment primary key,
+descricao_risco varchar(255) not null
+);
+
+create table tb_recomendacoes(
+descricao_recomendacoes varchar(255) not null,
+codDoInvestimento int,
+codDoRisco int,
+foreign key(codDoInvestimento) references tb_nivelInvestimento(id_nivel),
+foreign key(codDoRisco) references tb_nivelRisco(id_risco)
+);
+
+insert into tb_nivelInvestimento(descricao_nivel, valormax_nivel, valormin_nivel)values('D', '9999', '1000'),('C', '50000', '10000'),('B', '100000', '50001'),('A', '1000000', '100001');
+
+insert into tb_nivelRisco(descricao_risco)values('100% de chance de ganhar 10%'),('Possibilidade de ganhar entre 5% - 20%'),('Possibilidade de ganhar entre 0% - 25%'),('Possibilidade de perder 10% ou ganhar até 40%');
+
+insert into tb_recomendacoes(descricao_recomendacoes, codDoInvestimento, codDoRisco)values
+('Alupar Units (ALUP11), Banco do Brasil (BBAS3), Marfrig (MRFG3), Movida (MOVI3), Multiplan (MULT4), Petrobras (PETR4), Tim (TIMS3), SLC Agrícola (SLCE3), Vivara (VIVA3), CDBs, Tesouro direto, Tesouro Selic','1','1'),
+('Vibra Energia (VBBR3), São Martinho (SMTO3), JBS (JBSS3), Klabin (KLBN11), Simpar (SIMH3), PetroRio (PRIO3), Engie (EGIE3), Vale (VALE3), TAEE11 (TAEE11), Petrobras (PETR4), Randon (RAPT4), Fleury (FLRY3)','1','2'),
+('Bradesco (BBDC4), BR Malls (BRML3), Vivo (VIVT3), PetroRio (PRIO3), Assaí (ASAI3)','1','3'),
+('Equatorial (EQTL3), Banco do Brasil (BBAS3), Bradesco (BBDC4), Bradespar (BRAP4), Carrefour (CRFB3), CSN (CSNA3)','1','4'),
+('Alupar (ALUP11), Cosan (CSAN3), Gerdau (GGBR4), JHSF (JHSF3), Marfrig (MRFG3), Movida (MOVI3), Multiplan (MULT3), Sinqia (SQIA3), Suzano (SUZB3), Tim (TIMS3)','2','1'),
+('B3 (B3SA3), Lojas Renner	(LREN3), Arezzo	(ARZZ3), Weg	(WEGE3), Suzano	(SUZB3), Itaú Unibanco (ITUB4), Petrobras (PETR4), Itaúsa (ITSA4), Copel (CPLE6), Gerdau (GGBR4)','2','2'),
+('Petrobras (PETR4), VALE (VALE3), Iguatemi (IGTI11), JBS (JBSS3), JHFS (JHFS3), XP, CDBs','2','3'),
+('Vale (VALE3), Banco do Brasil (BBAS3), PetroRio (PRIO3), 3R Petroleum (RRRP3), CBA (CBAV3), Simpar (SIMH3), Bresco Logística (BRCO11), Microsoft (MSFT34)','2','4'),
+('Multilaser (MLAS3), Klabin (KLBN11), PetroRio (PRIO3), Santander (SANB11), Transmissão Paulista (TRPL4), Itaú Unibanco (ITUB4), Alupar (ALUP11), Arezzo (ARZZ3), Energias BR (ENBR3), Vivara (VIVA3)','3','1'),
+('Vale (VALE3), JHSF (JHSF3), Raizen (RAIZ4), Energias do Brasil (ENBR3), PetroRio (PRIO3), Tim (TIMS3), Weg (WEGE3), JBS (JBSS3), Booking Holdings – BDR (BKNG3), Copasa (CSMG3)','3','2'),
+('Natura & Co (NTCO3), Bradesco (BBDC4), Banco BTG (BPAC11), Petz (PETZ3), CVC (CVCB3), Vale (VALE3), Simpar (SIMH3), Grupo Ultra (UGPA3), BRF (BRFS3), Via (VIIA3)','3','3'),
+('Alupar (ALUP11), Cosan (CSAN3), Gerdau (GGBR4), JHSF (JHSF3), Marfrig (MRFG3), Movida (MOVI3), Multiplan (MULT3), Sinqia (SQIA3), Suzano (SUZB3), Vale (VALE3), Kepler Weber (KEPL3)','3','4'),
+('BRF (BRFS3), Cogna (COGN3), Inter (BIDI11), IRB Brasil (IRBR3), Magazine Luiza (MGLU3), Méliuz (CASH3), Natura (NTCO3), Nubank (NUBR33), Oi (OIBR3), Via (VIIA3), CDBS','4','1'),
+('Vibra Energia (VBBR3), São Martinho (SMTO3), JBS (JBSS3), Klabin (KLBN11), CDBs, XP, Banco do Brasil (BBAS3), Lojas Renner (LREN3), Cemig (CMIG4)','4','2'),
+('Tesouro direto, CDBS, Tesouro Selic, Tesouro direto, Sinqia (SQIA3), Vamos (VAMO3), PetroRio (PRIO3), Vale (VALE3), Kepler Weber (KEPL3)','4','3'),
+('CDBs, XP, Banco do Brasil (BBAS3), Lojas Renner (LREN3), Cemig (CMIG4), Iguatemi (IGTI11), Suzano (SUZB3), Petrobras (PETR4), Vale (VALE3), Weg (WEGE3), Ambev (ABEV3), JHSF (JHSF3)','4','4');
+  
+/*//desc tb_cursos;
+//desc tb_noticias;
+//desc tb_usuario;
+
+//select * from tb_usuario;
+
+//select * from tb_cursos order by id_curos desc;
+
+//select * from tb_cursos;
+
+//select * from tb_noticias;
+
+//select * from tb_cursos where nome_cursos like "Por";
+
+
+
+
+//drop database edfinanceira;*/
+
+/*select * from tb_nivelInvestimento where descricao_nivel='D';
+select * from tb_perfilInvestimento;
+select * from tb_nivelRisco;
+select * from tb_recomendacoes;
+select * from tb_nivelInvestimento;
+select * from tb_nivelInvestimento where descricao_nivel='C';
+select * from tb_nivelInvestimento where descricao_nivel='D';
+select * from tb_nivelRisco where descricao_risco='100% de chance de ganhar 10%';
+select * from tb_recomendacoes where codDoInvestimento='1' and codDoRisco='1';
+select * from tb_recomendacoes where codDoInvestimento='1' and codDoRisco='2';
+
+
+SELECT Tabela1.coluna1, Tabela1.coluna2, Tabela2.coluna1, Tabela2.coluna2 FROM Tabela1, Tabela2 WHERE Tabela1.chave_primaria = Tabela2.chave_estrangeira;
+select tb_recomendacoes.descricao_recomendacoes from tb_recomendacoes where tb_recomendacoes.codDoInvestimento='1' and tb_recomendacoes.codDoRisco='1';
+
+select tb_recomendacoes.descricao_recomendacoes from tb_recomendacoes where tb_recomendacoes.codDoInvestimento='1' and tb_recomendacoes.codDoRisco='1';*/
