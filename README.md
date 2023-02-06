@@ -14,7 +14,7 @@ The project is in progress with the aim of publicizing Lucas Rodrigues Vacari's 
 Project status:
 
 The project is currently in production, finalized the base structure and visuals, more receiving updates with new things.
-Date of the last version of the project: January.
+Date of the last version of the project: February.
 
 Technologies used:
 
@@ -32,4 +32,4 @@ Project Developers:
 
 Lucas Vacari: https://github.com/BrookSK
 
-Last update date: January 27, 2023
+Last update date: February 06, 2023
