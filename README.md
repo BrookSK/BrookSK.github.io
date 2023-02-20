@@ -21,7 +21,7 @@ Project help:<br>
 To learn more about the project, contact: lucasrvacari9@gmail.com
 
 Contributing persons:<br>
------------------------------------------
+---
 
 Project Developers:<br>
 Lucas Vacari: https://github.com/BrookSK
