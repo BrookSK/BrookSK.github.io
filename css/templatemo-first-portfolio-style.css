@@ -613,7 +613,7 @@ strong {
 
 .clients-image {
   display: block;
-  max-width: 120px;
+  max-width: 125px;
   margin: auto;
   transition: all ease 0.2s;
 }
