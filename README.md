@@ -28,4 +28,4 @@ Lucas Vacari: https://github.com/BrookSK
 
 Link to project preview: https://brooksk.github.io
 
-Last update date: February 20, 2023
+Last update date: March 09, 2023
